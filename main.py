@@ -3,15 +3,13 @@ from player import Player
 
 __author__ = 'Stian R. Hanssen'
 
-hist_num1 = 0
-hist_num2 = 0
 HISTORIAN_QUESTION = "What is the memory span of the historian? "
 OPTIONS = " [0: Random, 1: Sequential, 2: Most Common, 3: Historian] "
 
 
 def run():
-    global hist_num1
-    global hist_num2
+    hist_num1 = 0
+    hist_num2 = 0
     player1 = custom_text_input("Player 1 type?" + OPTIONS, '0', '1', '2', '3')
     if player1 == '3':
         hist_num1 = custom_type_input(HISTORIAN_QUESTION, int)
