@@ -45,11 +45,11 @@ class RandomPlayer(Player):
 class SequentialPlayer(Player):
     def __init__(self):
         super().__init__()
-        self._prevMove = 2
+        self.__prevMove = 2
 
     def pick_action(self):
         move = (self._prevMove + 1) % 3
-        self._prevMove = move
+        self.__prevMove = move
         return Action(move)
 
 
